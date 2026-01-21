@@ -1,0 +1,31 @@
+{
+  "version": "2.0",
+  "mediawiki": {
+    "name": "LanzTest",
+    "root": "https://lanztest.wikibase.cloud/wiki/",
+    "main_page": "https://lanztest.wikibase.cloud/wiki/Main_Page",
+    "api": "https://lanztest.wikibase.cloud/w/api.php"
+  },
+  "wikibase": {
+    "site_iri": "http://lanztest.wikibase.cloud/entity/",
+    "maxlag": 5,
+    "properties": {
+      "instance_of": "P1",
+      "subclass_of": "P2"
+    }
+  },
+  "oauth": {
+    "registration_page": "https://lanztest.wikibase.cloud/wiki/Special:OAuthConsumerRegistration/propose"
+  },
+  "entity_types": {
+    "item": {
+      "site_iri": "http://lanztest.wikibase.cloud/entity/",
+      "mediawiki_api": "https://lanztest.wikibase.cloud/w/api.php",
+      "reconciliation_endpoint": "http://127.0.0.1:8000/${lang}/api"
+    },
+    "property": {
+      "site_iri": "http://lanztest.wikibase.cloud/entity/",
+      "mediawiki_api": "https://lanztest.wikibase.cloud/w/api.php"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+:9999
+handle /w/api.php* {
+ reverse_proxy https://lanztest.wikibase.cloud {
+ header_up Host lanztest.wikibase.cloud
+ # Avoid Anubis browser challenge
+ header_up User-Agent "OpenRefine-Caddy-Proxy/1.0"
+ # CORS headers (port ≠ origin)
+ header_down Access-Control-Allow-Origin *
+ header_down Access-Control-Allow-Methods "GET, POST, OPTIONS"
+ header_down Access-Control-Allow-Headers *
+ }
+}
